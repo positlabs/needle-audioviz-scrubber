@@ -37,17 +37,15 @@ export class AudioViz extends Behaviour {
       this.rectNaturalSize.y = this.image.sprite.rect.height
     }
 
-    setTimeout(() => {
-
+    // setTimeout(() => {
       // let rectAspect = this.rectNaturalSize.y / this.rectNaturalSize.x
       // let windowAspect = window.innerHeight / window.innerWidth
-
       // // fill height
       // this.image.setOptions({
       //   width: 500 * windowAspect / rectAspect,
       //   height: 500,
       // })
-    }, 1)
+    // }, 1)
 
     this.onResize()
   }
@@ -120,6 +118,6 @@ export class AudioViz extends Behaviour {
     // update the sprite source texture
     const sprite = this.frames[Math.floor(this.walkFrame * 4) % 150]
     // const sprite = this.frames[Math.floor(this.smoothLevel * 600) % 150];
-    this.image["setTexture"](sprite?.texture)
+    this.image.setTexture(sprite?.texture)
   }
 }
